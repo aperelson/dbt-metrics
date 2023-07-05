@@ -8,14 +8,14 @@ with source as (
 
 renamed as (
     select
-        id as customer_id,
-        first_name,
-        last_name
+        id as CUSTOMER_ID,
+        first_name AS FIRST_NAME,
+        last_name AS LAST_NAME
     from source
 )
 
 select  
-    customer_id,
-    first_name,
-    last_name
+    CUSTOMER_ID,
+    FIRST_NAME,
+    LAST_NAME
 from renamed

@@ -9,18 +9,17 @@ with source as (
 renamed as (
 
     select
-        id as payment_id,
-        order_id,
-        payment_method,
-        -- `amount` is currently stored in cents, so we convert it to dollars
-        amount / 100 as amount
+        id AS PAYMENT_ID,
+        order_id AS ORDER_ID,
+        payment_method AS PAYMENT_METHOD,
+        amount AS AMOUNT
     from source
 
 )
 
 select 
-    payment_id,
-    order_id,
-    payment_method,
-    amount 
+    PAYMENT_ID,
+    ORDER_ID,
+    PAYMENT_METHOD,
+    AMOUNT 
 from renamed

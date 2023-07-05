@@ -9,16 +9,16 @@ with source as (
 
 renamed as (
     select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
+        id as ORDER_ID,
+        user_id as CUSTOMER_ID,
+        order_date AS ORDER_DATE,
+        status AS STATUS
     from source
 )
 
 select  
-    order_id,
-    customer_id,
-    order_date,
-    status
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    STATUS
 from renamed
