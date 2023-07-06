@@ -24,9 +24,9 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 seeds:
-    dbt_metrics:
-        enabled: true
-        schema: staging
+  dbt_metrics:
+    enabled: true
+    schema: seeds
 
 # Tell dbt to build all models in the example/ directory as views.
 # These settings can be overridden in the individual model files using the `{{ config(...) }}` macro.
@@ -39,4 +39,4 @@ models:
       +schema: transform 
       +materialized: view
     metrics:
-      +schema: METRICS
+      +schema: metrics
