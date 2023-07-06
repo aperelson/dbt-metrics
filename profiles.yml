@@ -1,0 +1,27 @@
+dw1:
+  outputs:
+    dev:
+      account: servian.ap-southeast-2
+      authenticator: externalbrowser
+      database: AP_TEST
+      role: SYSADMIN
+      schema: TRANSFORM
+      threads: 1
+      type: snowflake
+      user: ANDREW.PERELSON@SERVIAN.COM
+      warehouse: AP_DBA_WH
+  target: dev
+
+dbt-metrics:
+  outputs:
+    dev:
+      account: servian.ap-southeast-2
+      database: AP_TEST
+      user: AP_TEST_USER
+      password: AP_TEST_USER
+      role: SYSADMIN
+      schema: TRANSFORM
+      threads: 1
+      type: snowflake
+      warehouse: AP_DBA_WH
+  target: dev
