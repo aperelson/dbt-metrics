@@ -17,8 +17,6 @@ dbt-metrics:
     dev:
       account: servian.ap-southeast-2
       database: AP_TEST
-      user: AP_TEST_USER
-      password: AP_TEST_USER
       role: SYSADMIN
       schema: TRANSFORM
       threads: 1
